@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_checkcontent" android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="生源省份：  " />
+
+        <EditText
+            android:id="@+id/et_queryprovince"
+            android:layout_width="match_parent" android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_checkcontent"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="专       业：   " />
+
+        <EditText
+            android:id="@+id/et_major"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/tv_checkcontent"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:text="录取年份：  " />
+
+        <EditText
+            android:id="@+id/et_queryyear"
+            android:layout_width="match_parent" 
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_checkcontent"
+            android:hint="请输入查询内容"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

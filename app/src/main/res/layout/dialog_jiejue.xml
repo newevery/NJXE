@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    android:id="@+id/dialog"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_dalydj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textviewbag"
+        android:text="档案利用登记" />
+
+
+
+    <Button
+        android:id="@+id/btn_dalyjl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textviewbag"
+        android:text="档案利用记录" />
+
+
+</LinearLayout>

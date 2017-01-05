@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_borrow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_archiveType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardPreventCornerOverlap="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_doType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="请选择办理业务类型：" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doType"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:text="档案类型：" />
+
+                <Spinner
+                    android:id="@+id/sp_archiveType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:entries="@array/daLx" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:text="借阅方式：" />
+
+                <Spinner
+                    android:id="@+id/sp_borrowType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:entries="@array/daJYFS" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_peopleType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cv_archiveType"
+        android:layout_marginTop="5dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardPreventCornerOverlap="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_peopleType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="请填写办理人信息：" />
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_peopleType"
+                android:layout_marginLeft="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:gravity="center|left"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:text="查阅人姓名：" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:hint="姓名"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_marginLeft="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:text="联系电话：" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="电话号码"
+                    android:inputType="phone"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/linearLayout6"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:gravity="center|left"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:text="部门单位：" />
+
+                <Spinner
+                    android:id="@+id/sp_sectionType"
+                    android:layout_width="0dp"
+                    android:gravity="center|left"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:entries="@array/daLx" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3bumen"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/linearLayout3"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:gravity="center|left"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:text="证件类型：" />
+
+                <Spinner
+                    android:id="@+id/sp_cardType"
+                    android:layout_width="0dp"
+                    android:gravity="center|left"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/cgeZj" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/linearLayout3bumen">
+
+                <TextView
+                    android:id="@+id/tv_cardNum"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="30dp"
+                    android:text="证件号码：  " />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/et_cardnum"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|left"
+                    android:hint="请输入证件号码"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_businissType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cv_peopleType"
+        android:layout_marginTop="5dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_businessType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="请填写业务信息：" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_toaim"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1"
+                    android:text="档案利用目的：  " />
+
+                <Spinner
+                    android:id="@+id/sp_daLyMd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/dalLyMd" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rl_aim">
+
+                <TextView
+                    android:id="@+id/tv_daynum"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:layout_marginLeft="30dp"
+                    android:text="借阅天数：  " />
+
+                <EditText
+                    android:id="@+id/et_daynum"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:layout_toRightOf="@+id/tv_daynum"
+                    android:hint="请选择"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
